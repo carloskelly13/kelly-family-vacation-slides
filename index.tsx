@@ -8,10 +8,13 @@ import {
   SpectacleLogo,
   Text,
   type DeckProps,
+  ListItem,
+  UnorderedList,
 } from "spectacle";
 
 import introImg from "./assets/intro-img.png";
 import coastImg from "./assets/main.webp";
+import mapImg from "./assets/map.webp";
 
 const theme: DeckProps["theme"] = {
   colors: {
@@ -68,9 +71,41 @@ const Presentation = () => (
       </FlexBox>
     </Slide>
     <Slide>
-      <FlexBox height="100%">
-        <Heading fontSize="h2">Made with</Heading>
-        <SpectacleLogo size={300} />
+      <FlexBox height="100%" flexDirection="column">
+        <Heading fontSize="h3">The High Points</Heading>
+        <UnorderedList className="list-disc w-9/12">
+          <ListItem>Unique, car-free island in Lake Huron, Michigan.</ListItem>
+          <ListItem>Accessible by ferry, offering a scenic journey.</ListItem>
+          <ListItem>
+            Historic 19th-century architecture downtown, with quaint shops and
+            restaurants.
+          </ListItem>
+          <ListItem>
+            Enjoy the natural beauty with activities like hiking, biking, and
+            horseback riding along scenic trails and stunning Lake Huron shores.
+          </ListItem>
+          <ListItem>
+            Great Wi-Fi for playing games on your Nintendo Switch.
+          </ListItem>
+        </UnorderedList>
+      </FlexBox>
+    </Slide>
+    <Slide>
+      <FlexBox height="100%" flexDirection="column">
+        <Heading fontSize="h3">Where is Mackinac Island?</Heading>
+        <img src={mapImg} className="h-3/4 drop-shadow-2xl" />
+      </FlexBox>
+    </Slide>
+    <Slide>
+      <FlexBox height="100%" flexDirection="column">
+        <Heading fontSize="h3">
+          Presented by Carlos, Michael, &amp; Sonia.
+        </Heading>
+        <div className="h-1 border-b border-dashed border-b-teal-400 w-10/12 mb-4" />
+        <FlexBox className="border-b-sky-100">
+          <Heading fontSize="h3">Made with</Heading>
+          <SpectacleLogo size={133} />
+        </FlexBox>
       </FlexBox>
     </Slide>
   </Deck>
