@@ -9,6 +9,8 @@ import {
   type DeckProps,
 } from "spectacle";
 
+import introImg from "./assets/intro-img.png";
+
 const theme: DeckProps["theme"] = {
   colors: {
     primary: "#22d3ee",
@@ -27,7 +29,8 @@ const Presentation = () => (
     template={() => <DefaultTemplate color={theme.colors?.primary} />}
   >
     <Slide>
-      <FlexBox height="100%">
+      <FlexBox height="100%" flexDirection="column">
+        <img src={introImg} className="w-80 rounded-full shadow-2xl" />
         <Heading>Kelly Family Vacation 2024</Heading>
       </FlexBox>
     </Slide>
