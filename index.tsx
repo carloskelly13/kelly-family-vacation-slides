@@ -1,4 +1,3 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
 import {
   Deck,
@@ -7,10 +6,26 @@ import {
   FlexBox,
   Heading,
   SpectacleLogo,
+  type DeckProps,
 } from "spectacle";
 
+const theme: DeckProps["theme"] = {
+  colors: {
+    primary: "#22d3ee",
+    secondary: "#a5f3fc",
+    tertiary: "#155e75",
+  },
+  fonts: {
+    header: "'Rethink Sans', sans-serif;",
+    text: "'Rethink Sans', sans-serif;",
+  },
+};
+
 const Presentation = () => (
-  <Deck template={() => <DefaultTemplate />}>
+  <Deck
+    theme={theme}
+    template={() => <DefaultTemplate color={theme.colors?.primary} />}
+  >
     <Slide>
       <FlexBox height="100%">
         <Heading>Kelly Family Vacation 2024</Heading>
