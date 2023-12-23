@@ -1,6 +1,13 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Deck, DefaultTemplate, Slide, FlexBox, Heading, SpectacleLogo } from 'spectacle';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import {
+  Deck,
+  DefaultTemplate,
+  Slide,
+  FlexBox,
+  Heading,
+  SpectacleLogo,
+} from "spectacle";
 
 const Presentation = () => (
   <Deck template={() => <DefaultTemplate />}>
@@ -18,4 +25,4 @@ const Presentation = () => (
   </Deck>
 );
 
-createRoot(document.getElementById('app')!).render(<Presentation />);
+createRoot(document.getElementById("app")!).render(<Presentation />);
