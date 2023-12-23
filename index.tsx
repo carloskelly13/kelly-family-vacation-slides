@@ -11,7 +11,7 @@ import {
 } from "spectacle";
 
 import introImg from "./assets/intro-img.png";
-import coastImg from "./assets/IMG_0428.jpg";
+import coastImg from "./assets/main.webp";
 
 const theme: DeckProps["theme"] = {
   colors: {
